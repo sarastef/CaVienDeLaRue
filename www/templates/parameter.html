@@ -1,0 +1,29 @@
+<ion-view view-title="Paramètres">
+  <ion-content padding>
+    <ion-item>
+        <ion-label>Notifications</ion-label>
+        <ion-toggle disabled checked="false"></ion-toggle>
+    </ion-item>
+
+    <button ion-item (click)="openPage(notifParam)">Mes notifications
+    </button>
+        
+    <ion-item>
+        <ion-label>Mode fantôme</ion-label>
+        <ion-toggle disabled checked="false"></ion-toggle>
+    </ion-item>
+     <ion-item>
+        <ion-label>Notifications</ion-label>
+        <ion-toggle disabled checked="false"></ion-toggle>
+    </ion-item>
+
+        <button ion-button color="secondary" block (click)="doPrompt()">Changer pseudo</button>
+
+     <ion-content padding>
+        <button ion-button color="secondary" block (click)="doPrompt()">Changer mot de passe</button>
+    </ion-content>
+  </ion-content>
+
+
+</ion-view>
+

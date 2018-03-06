@@ -1,0 +1,92 @@
+<ion-view view-title="Profil">
+  <ion-content>
+
+  	<div class="list"  ng-controller="ProgressBarCtrl" >
+        <ion-item class="profile-item">
+          
+          <div class="profile-picture big-profile-picture">
+             <img src="img/profil.svg">
+          </div>
+
+          <h2 class="profile-name dark">Pseudo</h2>
+          <div class="profile-info">{{username}}</div>
+		  <br>
+		  <div class="progres" style="background-color: #6695A2">
+		  	<div class="loader" style="width: {{progressPercent}}%;">
+			<p class="percent">{{progressPercent}}%</p>
+		  </div>
+		  </div>
+          
+		<!--
+		  <div class="card" ng-show="progressPercent > 0">
+				<div class="item item-text-wrap item-title">
+					<div class="loader" style="width: {{progressPercent}}%;">
+						<p class="percent">{{progressPercent}}%</p>
+					</div>
+				</div>
+		  </div>
+		-->
+        </ion-item>
+        
+    </div>
+
+
+
+
+
+ 	 <div class="row">
+        <div class="col">
+        	<div class="card bad">
+			  <div class="item item-text-wrap header">
+			     <a href="#/app/profil/badges"><img class="full-image" src="img/badge.svg"></a>
+			  </div>
+			  <div class="item item-title item-card">
+			    <a href="#/app/profil/badges">Bagde</a>
+			  </div>
+			</div>
+        </div>
+        <div class="col"> 
+        	<div class="card avatar">
+			  <div class="item item-text-wrap header">
+			    <a href="#/app/profil/avatar"><img class="full-image" src="img/avatar.svg"></a>
+			  </div>
+			  <div class="item item-title item-card">
+			   <a href="#/app/profil/avatar">Avatar</a>
+			  </div>
+			</div>
+		</div>
+    </div>
+
+     <div class="row">
+        <div class="col">
+        	<div class="card params">
+			  <div class="item item-text-wrap ">
+			    <img class="full-image" src="img/params.svg">
+			  </div>
+			  <div class="item item-title item-card">
+			   Réglage
+			  </div>
+			</div>
+        </div>
+        <div class="col"> 
+        	<div class="card historique">
+			  <div class="item item-text-wrap ">
+			    <img class="full-image" src="img/historique.svg">
+			  </div>
+			  <div class="item item-title item-card">
+			   Historique
+			  </div>
+			</div>
+		</div>
+    </div>
+	
+
+     <center>
+     	<a class="button icon-right  button-energized" href="#/app" >Déconnection</a>
+     
+     </center>
+
+	 
+
+  </ion-content>
+</ion-view>

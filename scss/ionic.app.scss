@@ -1,0 +1,394 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+
+*/
+
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+$energized:                       #ffd54f !default;
+$dark:                            #005064 !default;
+$positive:                        #005064 !default;
+$light:                           #fff !default;
+$floating-button-size: 56px;
+$floating-button-small-size: 40px;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+*{
+  color: $dark;
+}
+
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+.button-energized{
+  color: $dark !important;
+  font-weight: bold;
+}
+
+/* MENU */
+.item{
+	color:$dark !important;
+	font-size: 1.2em;
+}
+
+.title_menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0 10px;
+    min-width: 30px;
+    height: 43px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 44px;
+	color:$dark;
+}
+.tab-nav{
+  height: 60px;
+  top:54px !important;
+ }
+
+ /* Pictos */
+
+ .item_picto{
+ 	width:35px;
+ 	height:35px;
+ 	margin: 0 15px;
+    vertical-align: middle;
+ }
+ 
+ .photo{
+ width:50px;
+ height:50px;
+ border-radius:50%;
+ background-color:white;
+ margin-left:15%;
+ margin-top:-10px;
+ }
+
+ /*** SE CONNECTER ***/
+ .title, h1, h2 ,h3, p{
+  color: $dark !important;
+ }
+ .info{
+ font-style: italic;
+ }
+ .card_login{
+   padding:30px 40px 40px 30px;
+   background-color: #ddd;
+ }
+ 
+
+
+ /* TITLE HEADER */
+ .search{
+ padding:5px;
+ border-radius:15%;
+ //background-color:white;
+ border: 2px solid $dark;
+ }
+
+ /* CARTE LOCALISATION */
+ion-fab button[ion-fab].retard{
+  bottom: 10px !important;
+  right: 10px !important;
+}
+ ion-fab button[ion-fab]{
+   background-color: darken($energized, 15%);
+   border-radius: 50%;
+   height: $floating-button-size;
+   width: $floating-button-size;
+   z-index: 12 !important;
+  position: absolute !important; 
+  //ça depend
+  bottom: 10px !important;
+  right: 10px !important;
+   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-transition: 0.2s linear !important;
+  transition: 0.2s linear !important;
+  -webkit-transition-property: -webkit-transform, all !important;
+  transition-property: transform, all !important;
+     
+}
+
+ion-fab button[ion-fab]:hover{
+  -webkit-transform: translate3d(0, -1px, 0)  !important;
+  transform: translate3d(0, -1px, 0) !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4) !important;
+  background: darken($energized, 10%) !important;
+}
+
+/**** Search ****/
+
+.header_item{
+    background-color:$energized;
+}
+
+.location, .change {
+   margin: 5px;
+   font-size: 25px;
+   background-color: $dark !important;
+   color: white !important;
+   padding: 9px 13px;
+   height:40px;
+   width: 40px;
+   border-radius: 50%;
+   
+}
+
+.change1{
+    background-color: $dark !important;
+   color: white !important;
+   -moz-transform: rotate(90deg) !important;
+    -ms-transform: rotate(90deg) !important;
+    -o-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+    transform: rotate(90deg)!important; 
+}
+
+.change{
+ -webkit-transform: rotate(-90deg) !important;
+    margin:20px;
+    border-radius: 10%;
+    right:10px;
+}
+.change::before{
+    -moz-transform: rotate(90deg) !important;
+    -ms-transform: rotate(90deg) !important;
+    -o-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important;
+    transform: rotate(90deg)!important; 
+}
+
+/****** TRAJET ******/
+#map_trajet {
+    width: 100%;
+    height: 50%;
+}
+.arret_trajet{
+
+ // border-color: white !important;
+  background-color:#ddd;
+  h2{
+    font-weight: bold !important;
+  }
+  p{
+    
+  }
+  .icon{
+    color:#CC3433;
+  }
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard-row:before {
+    
+    position: absolute;
+    content: " ";
+    width: 5px;
+    height: 50%;
+    background-color: $energized;
+    left: 25px;
+    
+}
+
+
+/**** ACCUEIL ****/
+.scroll {
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*** PROFIL ****/
+
+.profile-item {
+  text-align: center;
+ border-color:white  !important;
+
+}
+
+.profile-picture {
+  border: 5px solid $energized;
+  padding: 3px;
+  border-radius: 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 158px;
+  height: 158px;
+  overflow: hidden;
+}
+
+.profile-picture img {
+  width: 158px;
+  border-radius: 100%;
+}
+
+.profile-name {
+  padding-top: 20px;
+  font-size: x-large !important;
+  font-weight: bold !important;
+  text-transform: capitalize;
+}
+
+.item-card{
+   text-align: center;
+ }
+
+.card { border-radius : 10px; }
+
+.header{
+   background-color:#ffecb3;
+}
+
+
+/** progress bar***/
+
+.progres{
+  border-radius:100px;
+}
+
+.loader{
+  background: $dark !important;
+  border-radius:100px;
+  height:20px;
+  p{
+    text-align:center;
+    color:white !important;
+    text-align:center;
+  }
+}
+
+
+/***** AVATAR ***/
+
+.item-footer{
+  
+  font-weight: 300;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 30px;
+  background-color: $dark !important;
+  font-weight: 500;
+  border-color:white  !important;
+
+  a{
+    color: #fff !important;
+  }
+  
+}
+
+.item_bad {
+  width: 150px !important;
+  display: inline-block;
+}
+
+.item_bad:hover{ 
+  width: 200px !important;
+}
+
+ion-scroll {
+  min-height: 160px; 
+  height: auto;
+
+  .scroll-content {
+     padding: 0px !important;
+   }    
+}
+.avatar-picture {
+  border: 5px solid $energized;
+  padding: 10px;
+  border-radius: 10% 10% 0px 0px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+}
+
+.avatar-name {
+  padding: 10px;
+  margin-top:-20px;
+  margin:-10px auto;
+  border-radius: 10px;
+  width:250px;
+  background-color: $energized !important;
+  font-weight: bold !important;
+  
+}
+
+
+/*** Resultats ***/
+.item-title{
+  font-weight: 300;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 30px;
+  background-color: $energized !important;
+  color: $dark !important;
+  font-weight: 500;
+  border-color:white  !important;
+  
+}
+.item-trajer{
+  background-color: #f5f5f5 !important;
+
+}
+
+/*Ligne X*/
+.header .col {
+    background-color:#ffecb3;
+    font-weight: 500;
+}
+
+.ligne .col {
+    border: solid 1px #f5f5f5;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+.ligne .col:last-child {
+    border-right: solid 2px  #f5f5f5;
+}
+
+.ligne .row:last-child .col {
+    border-bottom: solid 2px  #f5f5f5;
+}

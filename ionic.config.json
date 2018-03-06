@@ -1,0 +1,14 @@
+{
+  "name": "BeOnTime",
+  "app_id": "53df46ce",
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

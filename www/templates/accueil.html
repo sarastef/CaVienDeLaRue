@@ -1,0 +1,24 @@
+<ion-view view-title="Be On Time" hide-back-button="true">
+  <ion-nav-title>
+     BeOnTime<img class='item_picto search item-icon-right' src='img/search.svg'>
+     
+    </ion-nav-title>
+
+
+    <ion-content ng-controller="MapController">
+
+      <div id="map" data-tap-disabled="true"></div>
+
+      <button ion-button color="secondary" block (click)="doPrompt()"> img signalement retard</button>
+          
+      <button ion-item i (click)="closeApp()">
+              Déconnection
+      </button>
+
+      <ion-fab right bottom>
+           <button class=" button-icon retard" ion-fab ><img class='retard' src='img/retard.svg'></button>
+      </ion-fab>
+
+    </ion-content>
+    
+</ion-view>

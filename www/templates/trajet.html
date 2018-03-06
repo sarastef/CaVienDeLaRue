@@ -1,0 +1,79 @@
+
+<ion-view view-title="Trajet">
+    <ion-content ng-controller="MapTrajetController">
+	
+		<div  id="map_trajet" data-tap-disabled="true"></div>
+
+		<div class="item item-title">
+		  
+		     Dans 15 min
+		    <span class="item-note">
+		       <i class="icon ion-alert-circled"></i>retard 5min
+		    </span>
+		</div>
+
+		<div class="item item-trajet item-text-wrap">
+			<center>
+				<a href="#/app/trajet"">
+				9:30 <i class="icon ion-ios-location "></i>
+
+				<svg width="250px" height="3px" viewBox="0 0 347 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    <path class="animated-svg"  d="M1.5,1.5 L345.5,1.5" id="Line" stroke="#005064" stroke-width="3"></path>
+			    </svg>
+
+			   	<i class="icon ion-ios-location "></i>12:30
+			   	<p>Dure: 10 min</p>
+
+			   	Prendre le  <img src="http://www.auvergne-mobilite.fr/design/default/base/bundles/canaltpfrontcore/images/modes/bus.png" title="Bus" alt="Bus">
+				<span class="ctp-line-code" style="background-color:#FFCC00; color:#FFFFFF">L</span>
+				</a>
+
+				<p>Direction: La Gare </p>
+			   
+			</center>
+			
+		</div>
+		
+		<div class="list">
+		   <a class="item item-icon-left arret_trajet" href="#">
+		    <i class="icon ion-ios-circle-filled"></i>
+		     <h2>Arret1</h2>
+		     <span class="info"> rue 14 saint </span>
+		     <p class="item-note"> 9:30
+		    </p>
+		    <div class=" stepwizard-row " ></div>
+		   
+		   </a>
+		   <a class="item item-icon-left arret_trajet" href="#">
+		    <i class="icon ion-ios-circle-filled"></i>
+		     <h2>Arret1</h2>
+		     <span> rue 14 saint </span>
+		     <p class="item-note"> 9:30
+		    </p>
+		    <div class=" stepwizard-row " ></div>
+		   
+		   </a>
+		   <a class="item item-icon-left arret_trajet" href="#">
+		    <i class="icon ion-ios-circle-filled"></i>
+		     <h2>Arret1</h2>
+		     <span> rue 14 saint </span>
+		     <p class="item-note"> 9:30
+		    </p>
+		   </a>
+
+		</div>
+		<ion-fab right bottom>
+           <button class=" button-icon retard" ion-fab >
+           	<img class='retard' src='img/launch.svg'>
+           </button>
+      </ion-fab>
+
+		
+
+
+		
+
+    </ion-content>
+
+
+</ion-view>
