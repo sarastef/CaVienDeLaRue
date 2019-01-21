@@ -1,3 +1,45 @@
+<ion-view view-title="Be On Time">
+
+  <ion-content >
+    <form ng-submit="login()">
+      <div class="list list-inset card_login">
+
+        <h3>Se Connecter</h3>
+        
+        <span class="input-label">Email</span>
+        <label class=" item item-input">         
+          <input type="text" ng-model="loginData.username" placeholder="john@suhr.com">
+        </label>
+        <br>
+         <span class="input-label">Mot de passe</span>
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+         <input type="password" ng-model="loginData.password" placeholder="">
+        </label>
+        &nbsp;
+         <center>
+        <button class="button button-block button-energized" type="submit">Connexion</button>
+        
+        <p class="login__signup info"><a href="#/app/trajets">Mot de passe perdu?</a></p>
+
+        <button class="button button-block button-energized" type="submit">Connexion avec Facebook</button>
+       
+        <svg width="250px" height="3px" viewBox="0 0 347 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path class="animated-svg"  d="M1.5,1.5 L345.5,1.5" id="Line" stroke="#005064" stroke-width="3"></path>
+        </svg>
+        </center>
+        <a class="button button-block button-energized"  href="#/app/inscription">S'inscrire sur l'application</a>
+
+
+      </div>
+    </form>
+  </ion-content>
+ 
+</ion-view>
+
+
+<!--
+
 <ion-modal-view>
   <ion-header-bar class="item-title">
     <h1 class="title ">Be On Time</h1>
@@ -38,7 +80,7 @@
       </div>
     </form>
 
-
+-->
 <!--
     <form ng-submit="login()">
       <div class="list card_login">

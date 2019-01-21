@@ -9,7 +9,7 @@ $stable:                          #f8f8f8 !default;
 $positive:                        #387ef5 !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
+$energized:                       #FA4616 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
@@ -20,15 +20,18 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-$energized:                       #ffd54f !default;
-$dark:                            #005064 !default;
+$energized:                       #FA4616 !default;
+$dark:                            #fff !default;
 $positive:                        #005064 !default;
 $light:                           #fff !default;
-$floating-button-size: 56px;
+$floating-button-size: 50px;
 $floating-button-small-size: 40px;
+$dark_top_menu: #2E2D2C;
+
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
 
 *{
   color: $dark;
@@ -43,10 +46,63 @@ a {
   font-weight: bold;
 }
 
+/*** BOTTOM MENU ***/
+.menu_bottom{
+  .list p{
+    padding: 10px;
+  }
+  .item{
+    border:none;
+  }
+
+}
+
 /* MENU */
+
+// TopMenu
+
+.bar-energized{
+  background-color: $dark_top_menu !important;
+}
+
+.bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before{
+  color: $dark !important;
+}
+
+.list .conection{
+  padding-top:45px !important;
+  border-color:white  !important;
+}
 .item{
-	color:$dark !important;
+  color: $light !important;
+	background-color: $dark_top_menu !important;
 	font-size: 1.2em;
+  border: 0 0 2px 0;
+}
+
+.list_menu{
+  padding-top: 45px !important;
+  .placeholder-icon{
+    color:#2E2D2C;
+  }
+
+  .item{
+  color: $light !important;
+  background-color: $energized !important;
+  font-size: 1.2em;
+  }
+}
+.input_search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #2E2D2C;
+  opacity: 1; /* Firefox */
+}
+
+.input_search:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #2E2D2C;
+}
+
+.input_search::-ms-input-placeholder { /* Microsoft Edge */
+  color: #2E2D2C;
 }
 
 .title_menu{
@@ -66,33 +122,51 @@ a {
     font-size: 22px;
     font-weight: 500;
     line-height: 44px;
-	color:$dark;
+	color:$dark_top_menu;
 }
+.bar-profile .item-content{
+  padding-top:25px;
+  background: $energized !important;
+  padding-left: 30px; 
+  padding-right: 30px; 
+
+}
+
+.bar-profile .name {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
 .tab-nav{
   height: 60px;
   top:54px !important;
  }
 
+
+
  /* Pictos */
 
+
  .item_picto{
+  color:  $light !important;
  	width:35px;
  	height:35px;
- 	margin: 0 15px;
-    vertical-align: middle;
- }
+ 	margin-left: 0 15px;
+  vertical-align: middle;
+  font-size:35px;
+  }
  
- .photo{
- width:50px;
- height:50px;
+ .bar-profile .photo{
+ width:100px;
+ height:100px;
  border-radius:50%;
  background-color:white;
- margin-left:15%;
  margin-top:-10px;
+ border: 3px solid $dark;
  }
 
  /*** SE CONNECTER ***/
- .title, h1, h2 ,h3, p{
+ .title, h1, h2 ,h3,h4, p{
   color: $dark !important;
  }
  .info{
@@ -108,26 +182,31 @@ a {
  /* TITLE HEADER */
  .search{
  padding:5px;
- border-radius:15%;
+ border-radius:10%;
  //background-color:white;
  border: 2px solid $dark;
  }
 
  /* CARTE LOCALISATION */
+ ion-fab button[ion-fab].aller{
+  top: 200px !important;
+  right: 10px !important;
+}
+
 ion-fab button[ion-fab].retard{
   bottom: 10px !important;
   right: 10px !important;
 }
- ion-fab button[ion-fab]{
-   background-color: darken($energized, 15%);
+ ion-fab button[ion-fab] {
+  background-color: $energized !important;
+   //background-color: darken($energized, 15%);
    border-radius: 50%;
    height: $floating-button-size;
    width: $floating-button-size;
    z-index: 12 !important;
   position: absolute !important; 
   //ça depend
-  bottom: 10px !important;
-  right: 10px !important;
+
    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
   -webkit-transform: translate3d(0, 0, 0) !important;
   transform: translate3d(0, 0, 0) !important;
@@ -138,6 +217,33 @@ ion-fab button[ion-fab].retard{
      
 }
 
+ion-fab button[ion-fab].add{
+  top: 40px !important;
+  right: 10px !important;
+}
+
+/*****ITINERAIRE******/
+ion-fab button[ion-fab].route{
+  top: 40px !important;
+  right: 70px !important;
+}
+
+/***** STREETART******/
+ion-fab button[ion-fab].art{
+  top: 100px !important;
+  right: 10px !important;
+}
+
+/**** RETARD ***/
+.retard_check{
+  border-radius: 50%;
+  height: $floating-button-size;
+  width: $floating-button-size;
+  padding : 5px;
+  border: 2px solid $dark;
+  background-color: $energized;
+}
+
 ion-fab button[ion-fab]:hover{
   -webkit-transform: translate3d(0, -1px, 0)  !important;
   transform: translate3d(0, -1px, 0) !important;
@@ -145,10 +251,58 @@ ion-fab button[ion-fab]:hover{
   background: darken($energized, 10%) !important;
 }
 
-/**** Search ****/
+/*** PROBLEM ***/
+input[type="range"] {
+  -webkit-appearance: none;
+  background-color: #bdc3c7;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+  padding: 0 5px;
+}
 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #ffd54f;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+​ input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: white;
+  border: 2px solid #ffd54f;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+}
+
+.question {
+  background: #ffd54f;
+  padding: .5rem;
+  display: inline-block;
+  text-align:center;
+}
+
+
+/**** Search ****/
+input{
+      color: $dark !important;
+      font-weight: 500;
+    }
 .header_item{
     background-color:$energized;
+    display: -webkit-box;
+    input{
+      color: #005064;
+      font-weight: 500;
+    }
 }
 
 .location, .change {
@@ -207,6 +361,13 @@ ion-fab button[ion-fab]:hover{
   }
 }
 
+.ctp-line-code{
+margin-bottom:5px;
+  padding:2px;
+  font-size: 16px;
+
+}
+
 .stepwizard-row {
     display: table-row;
 }
@@ -238,7 +399,7 @@ ion-fab button[ion-fab]:hover{
 
 .profile-item {
   text-align: center;
- border-color:white  !important;
+  border-color:white  !important;
 
 }
 

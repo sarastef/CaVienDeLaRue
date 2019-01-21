@@ -1,0 +1,33 @@
+<ion-modal-view>
+  <ion-header-bar class="item-title">
+    <h1 class="title ">SIGNALER UNE DÉGRADATION</h1>
+    <div class="button button-clear" ng-click="closeProblem()"><span class="icon ion-close"></span></div>
+  </ion-header-bar>
+  <ion-content >
+    <form ng-submit="doProblem()">
+      <div class="list list-inset card_login">
+        <center>
+          <div class="question">
+            <h4>Notez l'etat de l'arret de bus</h4>
+          </div>
+          
+          <div ng-controller="RangeCtrl">
+             <div>
+               <img class="img_change" ng-src="{{src}}" alt="" class="imagepreview">
+             </div>
+
+              <div>
+                <input type="range" min="1" max="5" step="1" ng-model="data3">
+              </div>
+          </div>
+          
+          <center>
+          <button class="button button-block button-energized" type="submit">Valider</button>
+        </center>
+        
+
+      </div>
+    </form>
+
+ </ion-content>
+</ion-modal-view>

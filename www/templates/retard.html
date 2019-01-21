@@ -1,0 +1,69 @@
+<div class="modal">
+  <ion-header-bar class="item-title">
+    <h1 class="title">SIGNALER UN RETARD</h1>
+   <div class="button button-clear" ng-click="closeRetard()"><span class="icon ion-close"></span></div>
+  </ion-header-bar>
+
+
+  <ion-content >
+    <form ng-submit="doRetard()">
+      <div class="list list-inset card_login">
+
+        <span class="input-label">Ligne :</span>
+        <label class=" item item-input">         
+          <input type="text" ng-model="retardData.ligne">
+        </label>
+        <br>
+
+        <span class="input-label">Direction :</span>
+        <label class=" item item-input">         
+          <input type="text" ng-model="retardData.direction" >
+        </label>
+        <br>
+
+        <span class="input-label">Arrêt :</span>
+        <label class=" item item-input">         
+          <input type="text" ng-model="retardData.arret" >
+        </label>
+        <br>
+        
+        <span class="input-label">Temps de retard :</span>
+        <label class=" item item-input">         
+          <input type="text" ng-model="retardData.arret" >
+        </label>
+        <br>
+
+         <center>
+        <button class="button button-block button-energized" type="submit">Signaler</button>
+
+
+      </div>
+    </form>
+
+ </ion-content>
+</div>
+<!--
+<ion-modal-view>
+  <ion-header-bar class="item-title">
+    <h1 class="title ">Be On Time</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content >
+    <form ng-submit="retard()">
+      <div class="list list-inset card_login">
+
+        <h3>Créer un nouveau compte</h3>
+        
+        
+         <center>
+        <button class="button button-block button-energized" type="submit">Inscription</button>
+
+
+      </div>
+    </form>
+
+ </ion-content>
+</ion-modal-view>
+-->

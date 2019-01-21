@@ -1,4 +1,6 @@
+<ion-view hide-nav-bar="userLoggedIn">
 <ion-side-menus enable-menu-with-back-views="false">
+  
   <ion-side-menu-content>
     <ion-nav-bar class="bar-energized">
       <ion-nav-back-button>
@@ -9,37 +11,97 @@
         </button>
       </ion-nav-buttons>
     </ion-nav-bar>
+
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-energized" ">
-      <img class="photo" src="img/profil.svg"><h2 class="title_menu">Menu</h2>
+
+    <ion-header-bar menu-close  ng-if="!isLogin" class="bar-energized"> 
+      <h2 class="title_menu" >Menu</h2>
     </ion-header-bar>
+
     <ion-content>
       <ion-list >
-        <ion-item  menu-close ng-click="log()" ng-if="!isLogin" >
+     
+        <div class="list_menu">
+          
+
+        <div class=" item  menu-close profile-item bar-profile">
+          <img class="photo" src="img/avatar.jpg">
+          <h2 class="name">Pretty Hate Machine</h2>
+          <div class="item-input-inset">
+              <label class="item-input-wrapper">
+                  <input type="search" placeholder="Search" class="input_search">
+                   <i class="icon ion-ios-search placeholder-icon"></i>
+              </label>    
+          </div>
+        </div>
+          
+          <a class=" item item-icon-right menu-close" href="#/app/choix_ligne">
+           <i class="icon ion-chevron-right"></i>
+          Ma Collection
+          </a>
+
+          <a class=" item item-icon-right menu-close" href="#/app/search">
+           <i class="icon ion-chevron-right"></i>
+          Mes itinéraires
+          </a>
+
+          <a class=" item item-icon-right menu-close" href="#/app/choix_ligne">
+           <i class="icon ion-chevron-right"></i>
+          Mes évènements
+          </a>
+
+          <a class=" item item-icon-right menu-close" href="#/app/profil">
+           <i class="icon ion-chevron-right"></i>
+           Mes Récompenses
+          </a>  
+
+        </div>
+     <!--   
+        <ion-item  menu-close href="#/app/profil" ng-if="isLogin" class="profile-item bar-profile " >
+            <img class="photo" src="img/avatar.jpg">
+            <h2 class="name">Pretty Hate Machine</h2>
+            <p>Voir le profil</p>
+        </ion-item>
+
+        <ion-item  menu-close href="#/app/login" ng-if="!isLogin" class="conection item" >
+           <i class="icon item_picto ion-log-in"></i>
           Se connecter
         </ion-item>
-        <ion-item menu-close  href="#/app/profil" ng-if="isLogin" >
-          Profil
-        </ion-item>
+
         <ion-item menu-close href="#/app/home">
-         <img class="item_picto carte" src="img/carte.svg"> Carte
+          Ma Collection
+         <img class="item_picto carte" src="img/carte.svg"> 
         </ion-item>
         <ion-item menu-close href="#/app/search">
-         <img class="item_picto" src="img/search.svg" > Recherche
+         <img class="item_picto" src="img/search.svg" > Mes itinéraires
         </ion-item>
         <ion-item menu-close href="#/app/favoris" ng-if="isLogin" >
-         <img class="item_picto favorite" src="img/favoris.svg" "> Favoris
+         <img class="item_picto favorite" src="img/favoris.svg" "> Mes évènements
         </ion-item>
+
         <ion-item menu-close href="#/app/choix_ligne">
-         <img class="item_picto horaire" src="img/calendar.svg"> Horaires
+         <img class="item_picto horaire" src="img/calendar.svg"> Mes Récompenses
         </ion-item>
-        <ion-item menu-close color="dark" href="#/app/parameter">
-         <img class="item_picto params" src="img/params.svg"> Paramètres
+
+        <ion-item menu-close  href="#/app/parameter" class="item">
+        Paramètres
+         <i class="icon item_picto ion-chevron-right"></i>
         </ion-item>
+
+        <ion-item  item menu-close ng-click="log()" ng-if="isLogin" class="item">
+           <i class="icon item_picto ion-log-out "></i>
+          Se déconnecter
+        </ion-item>
+-->
+       
+       
       </ion-list>
+
     </ion-content>
   </ion-side-menu>
+
 </ion-side-menus>
+</ion-view>

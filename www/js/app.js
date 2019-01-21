@@ -36,13 +36,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       views: {
         'menuContent': {
           templateUrl: 'templates/accueil.html',
-          controller: 'homeCtrl'
+          controller: 'retardCtrl'
         }
       }
     })
 
    .state('app.horaire', {
       url: '/horaire',
+       abstract: true,
       views: {
         'menuContent': {
           templateUrl: 'templates/horaire.html'
